@@ -1,0 +1,370 @@
+/* === Base Styles === */
+:root {
+    --black: #1a1a1a;
+    --cream: #f0e9dd;
+    --gold: #b8a88a;
+    --text-dark: #2c2c2c;
+    --text-light: #6e6e6e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: white;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* === Header & Navigation === */
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 1.5rem 4rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+}
+
+.nav-left a {
+    margin-right: 2rem;
+    transition: opacity 0.3s;
+}
+
+.nav-left a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    background: white;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.icon-btn {
+    color: white;
+    font-size: 1rem;
+}
+
+/* === Hero Section === */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.hero-image img {
+    height: 100%;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-sub {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.btn-primary {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 0.75rem 2rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: var(--black);
+}
+
+.hero-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+}
+
+/* === Section Shared === */
+.section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+}
+
+.divider {
+    height: 1px;
+    background: #ccc;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* === The Edit Section === */
+.edit-section {
+    background: var(--cream);
+    padding: 5rem 4rem;
+}
+
+.edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.edit-header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.edit-desc {
+    max-width: 320px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.product-card img {
+    aspect-ratio: 1 / 1;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.product-card p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+}
+
+/* === Point of View Section === */
+.pov-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pov-image img {
+    height: 100%;
+    min-height: 400px;
+}
+
+.pov-content {
+    background: var(--black);
+    color: white;
+    padding: 4rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pov-content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.pov-content p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.btn-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.3s;
+    display: inline-block;
+}
+
+.btn-link:hover {
+    border-bottom-color: currentColor;
+}
+
+/* === Our Brand Section === */
+.brand-section {
+    background: var(--cream);
+    padding: 5rem 4rem;
+    text-align: center;
+}
+
+.brand-section h2 {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* === Footer === */
+.footer {
+    background: var(--black);
+    color: white;
+    padding: 4rem 4rem 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-col h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footer-col h4 {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.75rem;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.footer-col ul li:hover {
+    opacity: 1;
+}
+
+.footer-col p {
+    opacity: 0.6;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.small {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .pov-section {
+        grid-template-columns: 1fr;
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    .nav-left a {
+        margin-right: 1rem;
+    }
+    .header, .edit-section, .brand-section, .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
